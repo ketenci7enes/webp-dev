@@ -18,7 +18,11 @@ if (!event) {
     
     container.innerHTML = `
         <figure>
-            <div style="background-color: #d1d5db; padding: 40px; text-align: center; border-radius: 8px; color:#333;">afiş görseli</div>
+            ${event.image 
+                ? `<img src="${event.image}" alt="${event.title} afişi" style="width:100%; max-height:360px; object-fit:cover; border-radius:var(--kose); display:block;">` 
+                : `<div style="background-color: #d1d5db; padding: 40px; text-align: center; border-radius: 8px; color:#333;">afiş görseli</div>`
+            }
+            <figcaption style="margin-top:8px;">Şekil 1: ${event.title} afişi</figcaption>
         </figure>
         
         <div>

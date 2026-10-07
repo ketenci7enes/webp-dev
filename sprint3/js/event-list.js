@@ -10,6 +10,7 @@ function createCard(event) {
     const dateStr = dateObj.toLocaleDateString("tr-TR", { day: 'numeric', month: 'long', year: 'numeric' });
     
     return `<article>
+        ${event.image ? `<img src="${event.image}" alt="${event.title}" style="width:100%; height:180px; object-fit:cover; border-radius:var(--kose); margin-bottom:10px; display:block;">` : ''}
         <h3>${event.title}</h3>
         <p>${event.category}</p>
         <p>Tarih: ${dateStr}, ${event.time}</p>

@@ -7,7 +7,8 @@ export const events = [
     time: "14:00",
     location: "A Blok Konferans Salonu",
     description: "Mezunlarla kariyer söyleşileri ve şirket standları.",
-    capacity: 120
+    capacity: 120,
+    image: "images1.jpg"
   },
   {
     id: "event-2",
@@ -17,7 +18,8 @@ export const events = [
     time: "10:00",
     location: "Bilgisayar Laboratuvarı 2",
     description: "Arduino ile çizgi izleyen robot yapımı, başlangıç seviyesi.",
-    capacity: 20
+    capacity: 20,
+    image: "images2.jpg"
   },
   {
     id: "event-3",
@@ -27,7 +29,8 @@ export const events = [
     time: "13:00",
     location: "B Blok Amfi 1",
     description: "Sektörden bir uzmanla güvenlik kariyeri üzerine sohbet.",
-    capacity: 50
+    capacity: 50,
+    image: "images3.jpg"
   },
   {
     id: "event-4",
@@ -37,7 +40,8 @@ export const events = [
     time: "15:00",
     location: "Bilgisayar Laboratuvarı 1",
     description: "HTML ve CSS ile ilk kişisel sayfanı yap.",
-    capacity: 30
+    capacity: 30,
+    image: "images1.jpg"
   },
   {
     id: "event-5",
@@ -47,7 +51,8 @@ export const events = [
     time: "11:00",
     location: "Kültür Merkezi",
     description: "Başarılı girişimcilerin hikayeleri.",
-    capacity: 200
+    capacity: 200,
+    image: "images2.jpg"
   },
   {
     id: "event-6",
@@ -57,6 +62,7 @@ export const events = [
     time: "16:00",
     location: "Mac Laboratuvarı",
     description: "Unity ile basit bir platform oyunu.",
-    capacity: 25
+    capacity: 25,
+    image: "images3.jpg"
   }
 ];
