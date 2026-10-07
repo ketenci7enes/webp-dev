@@ -1,0 +1,255 @@
+/* Mustafa Enes Ketenci 2311012811 */
+:root {
+  --no: 2311012811;
+  --ton: mod(var(--no), 360);
+  --renk-ana: hsl(var(--ton) 65% 38%);
+  --renk-zemin: hsl(var(--ton) 30% 97%);
+  --font: Verdana, sans-serif;
+  --bosluk-m: 1rem;  
+  --kose: 8px;
+}
+
+body { 
+    font-family: var(--font); 
+    background-color: var(--renk-zemin);
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header and Nav */
+header {
+    background-color: var(--renk-ana);
+    color: white;
+    padding: var(--bosluk-m);
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    display: inline-block;
+    padding: 8px 0; /* Dokunmatik hedef büyütme */
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content */
+main {
+    padding: var(--bosluk-m);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: var(--renk-ana);
+}
+
+/* Cards (Articles) */
+article {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: var(--kose);
+    padding: var(--bosluk-m);
+    margin-bottom: var(--bosluk-m);
+}
+
+article h3 {
+    margin-top: 0;
+    color: var(--renk-ana);
+}
+
+/* Links */
+a {
+    color: var(--renk-ana);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Forms */
+form div {
+    margin-bottom: var(--bosluk-m);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px; /* Dokunmatik alan */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* width 100% hesaplaması için */
+    font-family: var(--font);
+    font-size: 1rem;
+}
+
+/* Hatalı (boş bırakılan zorunlu) alanlar */
+input:required:invalid, 
+select:required:invalid, 
+textarea:required:invalid {
+    border-color: red;
+}
+
+button {
+    background-color: var(--renk-ana);
+    color: white;
+    border: none;
+    padding: 14px 20px; /* Büyük dokunmatik hedef */
+    border-radius: var(--kose);
+    cursor: pointer;
+    font-family: var(--font);
+    font-size: 1.1rem;
+    width: 100%; /* Mobilde tam genişlik */
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Detail page specific */
+figure {
+    margin: 0 0 var(--bosluk-m) 0;
+    text-align: center;
+    background-color: #e2e8f0; /* Afiş yedeği arka planı */
+    padding: var(--bosluk-m);
+    border-radius: var(--kose);
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--kose);
+}
+
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+}
+
+dl {
+    margin: 0;
+    background: white;
+    padding: var(--bosluk-m);
+    border: 1px solid #ddd;
+    border-radius: var(--kose);
+}
+dt {
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--renk-ana);
+}
+dd {
+    margin: 0 0 10px 0;
+}
+
+/* Footer */
+footer {
+    padding: var(--bosluk-m);
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Responsive (Desktop) */
+@media (min-width: 768px) {
+    /* Ana sayfa yaklaşan 2 etkinlik */
+    .yaklasan-etkinlikler {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--bosluk-m);
+    }
+    .yaklasan-etkinlikler article {
+        margin-bottom: 0;
+    }
+
+    /* Etkinlikler Grid (3 Sütun) */
+    .etkinlikler-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--bosluk-m);
+    }
+    .etkinlikler-grid article {
+        margin-bottom: 0;
+    }
+
+    /* Detay sayfası iki sütun */
+    .detay-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--bosluk-m);
+        align-items: start;
+    }
+
+    button {
+        width: auto;
+        padding: 10px 20px;
+    }
+}
+
+/* Filtre Formu */
+.filtre {
+    display: flex;
+    flex-direction: column;
+    gap: var(--bosluk-m);
+    margin-bottom: var(--bosluk-m);
+}
+@media (min-width: 768px) {
+    .filtre {
+        flex-direction: row;
+    }
+    .filtre div {
+        flex: 1;
+        margin-bottom: 0;
+    }
+}
+
+/* Hata ve Başarı Mesajları */
+.hata-mesaji {
+    color: red;
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 5px;
+}
+
+#form-mesaj {
+    margin-top: var(--bosluk-m);
+}
+
+.basari-kutusu {
+    background-color: #dcfce7;
+    border: 1px solid #22c55e;
+    color: #166534;
+    padding: var(--bosluk-m);
+    border-radius: var(--kose);
+}
+
+.hata-kutusu {
+    background-color: #fee2e2;
+    border: 1px solid #ef4444;
+    color: #991b1b;
+    padding: var(--bosluk-m);
+    border-radius: var(--kose);
+}
+
+/* Update invalid styling to use aria-invalid */
+input[aria-invalid="true"], 
+select[aria-invalid="true"], 
+textarea[aria-invalid="true"] {
+    border-color: red !important;
+}
