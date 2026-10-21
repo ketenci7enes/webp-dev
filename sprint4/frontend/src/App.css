@@ -1,7 +1,7 @@
-/* Mustafa Enes Ketenci 2311012811 */
+﻿/* Mustafa Enes Ketenci 2311012811 */
 :root {
   --no: 2311012811;
-  --ton: mod(var(--no), 360);
+  --ton: 11;  /* mod(2311012811, 360) = 11 - tarayıcı uyumluluğu için statik */
   --renk-ana: hsl(var(--ton) 65% 38%);
   --renk-zemin: hsl(var(--ton) 30% 97%);
   --font: Verdana, sans-serif;
