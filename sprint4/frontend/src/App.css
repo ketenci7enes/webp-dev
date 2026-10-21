@@ -42,6 +42,11 @@ nav a:hover {
     text-decoration: underline;
 }
 
+nav a[aria-current="page"] {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
 /* Main content */
 main {
     padding: var(--bosluk-m);
@@ -252,4 +257,14 @@ input[aria-invalid="true"],
 select[aria-invalid="true"], 
 textarea[aria-invalid="true"] {
     border-color: red !important;
+}
+
+/* Card images */
+article img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--kose);
+    margin-bottom: 10px;
+    display: block;
 }
