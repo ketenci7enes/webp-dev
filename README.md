@@ -7,7 +7,7 @@ sürecinin sonucudur.
 
 ## Canlı URL
 
-> Vercel adresi: `https://isimsoyisim-frontend.vercel.app`
+> Vercel adresi: `https://vercel.com/mustfaness/webp-dev/2FiuxHPyewmuTWs364VKPNy5THTq`
 >
 > Yayına alındıktan sonra bu satır gerçek adresle güncellenecektir.
 
