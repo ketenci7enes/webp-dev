@@ -5,8 +5,10 @@
   --renk-ana: hsl(var(--ton) 65% 38%);
   --renk-zemin: hsl(var(--ton) 30% 97%);
   --font: Verdana, sans-serif;
-  --bosluk-m: 1rem;  
+  --bosluk-s: 0.5rem;
+  --bosluk-m: 1rem;
   --kose: 8px;
+  --renk-hata: #dc2626;
 }
 
 body { 
@@ -103,13 +105,7 @@ input, select, textarea {
     font-size: 1rem;
 }
 
-/* Hatalı (boş bırakılan zorunlu) alanlar */
-input:required:invalid, 
-select:required:invalid, 
-textarea:required:invalid {
-    border-color: red;
-}
-
+/* Hatalı alanlar aria-invalid ile işaretlenir (aşağıda) */
 button {
     background-color: var(--renk-ana);
     color: white;
@@ -267,4 +263,156 @@ article img {
     border-radius: var(--kose);
     margin-bottom: 10px;
     display: block;
+}
+
+/* Sayfa başlıkları */
+.bolum-baslik {
+    color: var(--renk-ana);
+    margin-top: 0;
+}
+
+/* Menü header'dan ayrı duruyor: kendi zeminini alır */
+nav.menu {
+    background-color: var(--renk-ana);
+    padding: 0 var(--bosluk-m) var(--bosluk-m);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--bosluk-s);
+}
+
+nav.menu a {
+    margin-right: 0;
+}
+
+header.site-baslik h1 {
+    margin-bottom: 0;
+}
+
+/* Form hata metinleri */
+.hata-metni {
+    color: var(--renk-hata);
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Mesaj kutuları */
+.mesaj {
+    padding: var(--bosluk-m);
+    border-radius: var(--kose);
+    margin-top: var(--bosluk-m);
+}
+
+.mesaj-basari {
+    background-color: #dcfce7;
+    border: 1px solid #22c55e;
+    color: #166534;
+}
+
+.mesaj-hata {
+    background-color: #fee2e2;
+    border: 1px solid #ef4444;
+    color: #991b1b;
+}
+
+/* Bağlantıyı buton gibi gösteren yardımcı sınıf */
+.buton {
+    display: inline-block;
+    background-color: var(--renk-ana);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: var(--kose);
+    text-decoration: none;
+    line-height: 1.4;
+}
+
+.buton:hover {
+    opacity: 0.9;
+    text-decoration: none;
+}
+
+.buton-ikincil {
+    background-color: #475569;
+}
+
+/* Yönetim tablosu */
+.tablo {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    margin-top: var(--bosluk-m);
+}
+
+.tablo th,
+.tablo td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+.tablo th {
+    background: var(--renk-ana);
+    color: #fff;
+}
+
+.islemler {
+    display: flex;
+    gap: var(--bosluk-s);
+    align-items: center;
+}
+
+.buton-sil {
+    background-color: var(--renk-hata);
+}
+
+.tablo .islemler button {
+    width: auto;
+    padding: 8px 14px;
+    font-size: 0.95rem;
+}
+
+/* Telefonda tablo satırları kart olur */
+@media (max-width: 699px) {
+    .tablo thead {
+        display: none;
+    }
+
+    .tablo,
+    .tablo tbody,
+    .tablo tr,
+    .tablo td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .tablo tr {
+        border: 1px solid #ddd;
+        border-radius: var(--kose);
+        margin-bottom: var(--bosluk-m);
+        overflow: hidden;
+    }
+
+    .tablo td {
+        border: none;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .tablo td.islemler {
+        display: flex;
+        gap: var(--bosluk-s);
+        border-top: 1px solid #eee;
+        padding-top: 0.75rem;
+    }
+
+    .tablo td[data-baslik]::before {
+        content: attr(data-baslik) ": ";
+        font-weight: 700;
+        color: var(--renk-ana);
+    }
+
+    .tablo td.islemler .buton {
+        flex: 0 0 auto;
+    }
 }

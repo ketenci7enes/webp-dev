@@ -1,15 +1,7 @@
-﻿interface HeaderProps {
-  title: string;
-  text?: string;
-  children?: React.ReactNode;
-}
-
-function Header({ title, text, children }: HeaderProps) {
+﻿function Header() {
   return (
     <header className="site-baslik">
-      <h1>{title}</h1>
-      {text && <p>{text}</p>}
-      {children}
+      <h1>Kampüs Etkinlikleri</h1>
     </header>
   );
 }

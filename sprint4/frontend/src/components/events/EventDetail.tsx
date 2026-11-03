@@ -1,13 +1,12 @@
-﻿import type { CampusEvent } from "../../types/campus-event";
+﻿import { Link } from "react-router-dom";
+import type { CampusEvent } from "../../types/campus-event";
 import { formatDate } from "../../utils/format-date";
 
 interface EventDetailProps {
   event: CampusEvent;
-  onBack: () => void;
-  onEdit: (id: string) => void;
 }
 
-function EventDetail({ event, onBack, onEdit }: EventDetailProps) {
+function EventDetail({ event }: EventDetailProps) {
   return (
     <article className="detay detay-layout">
       <div>
@@ -19,7 +18,6 @@ function EventDetail({ event, onBack, onEdit }: EventDetailProps) {
         )}
       </div>
       <div>
-        <h2>{event.title}</h2>
         <dl>
           <dt>Tarih</dt>
           <dd>{formatDate(event.date)} {event.time}</dd>
@@ -35,8 +33,12 @@ function EventDetail({ event, onBack, onEdit }: EventDetailProps) {
           <p>{event.description}</p>
         </section>
         <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-          <button onClick={onBack}>← Listeye dön</button>
-          <button onClick={() => onEdit(event.id)}>Bu etkinliği güncelle</button>
+          <Link className="buton buton-ikincil" to="/events">
+            &larr; Listeye dön
+          </Link>
+          <Link className="buton" to={`/admin/${event.id}/edit`}>
+            Bu etkinliği güncelle
+          </Link>
         </div>
       </div>
     </article>
