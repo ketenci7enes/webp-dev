@@ -7,7 +7,7 @@ sürecinin sonucudur.
 
 ## Canlı URL
 
-> Vercel adresi: `https://vercel.com/mustfaness/webp-dev/2FiuxHPyewmuTWs364VKPNy5THTq`
+> Vercel adresi: `https://mustafaenesketenci-frontend.vercel.app/`
 >
 > Yayına alındıktan sonra bu satır gerçek adresle güncellenecektir.
 
