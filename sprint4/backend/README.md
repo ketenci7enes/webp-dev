@@ -1,6 +1,6 @@
 # Kampüs Etkinlikleri - Backend API
 
-Node.js ve Express ile geliştirilmiş REST API servisi.
+Node.js, Express ve MongoDB (Mongoose) ile geliştirilmiş REST API servisi.
 
 ## Çalıştırma Komutları
 
@@ -19,13 +19,22 @@ npm run dev
 npm start
 ```
 
+Örnek verilerin veritabanına yüklenmesi (önce mevcut kayıtları siler):
+```bash
+npm run seed
+```
+
 ## Ortam Değişkenleri (.env)
 
-Sunucu portu `.env` dosyasından okunur:
+Sunucu portu ve veritabanı adresi `.env` dosyasından okunur:
 ```env
 PORT=3000
+MONGODB_URI=mongodb://127.0.0.1:27017/kampus
 ```
-Tanımlanmadığı takdirde varsayılan olarak `3000` portu kullanılır. `.env.example` dosyası örnek şablonu içerir.
+`PORT` tanımlanmadığı takdirde varsayılan olarak `3000` portu kullanılır.
+`MONGODB_URI` zorunludur; gerçek Atlas adresi yalnızca yereldeki `.env`
+dosyasında tutulur ve repoya eklenmez. `.env.example` dosyası yer tutucu
+değerler içeren şablonu barındırır.
 
 ## REST Sözleşmesi
 
