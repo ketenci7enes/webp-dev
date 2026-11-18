@@ -49,7 +49,7 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:3000/events/6afd5ac117b1f18c28e344a3",
+          "raw": "http://localhost:3000/events/6afd5e0d718fb4d1d48c31a2",
           "protocol": "http",
           "host": [
             "localhost"
